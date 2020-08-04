@@ -38,24 +38,30 @@ function button2() {
     }
 }
 
-var options = ['Go outside', 'Board Games','non E-sports','meet survivers']
+var options = ['music', 'art', 'Board Games', 'sports', 'meet survivers']
 
-var imgs= ['','images/boardGame.jpg', 'images/sports.jpg', 'images/meeting.jpg']
+var imgs = ['images/music.jpg', 'images/art.jpg', 'images/boardGame.jpg', 'images/sports.jpg', 'images/meeting.jpg']
+
+
 
 
 
 
 function things() {
+  
+    
+   var rand = Math.floor(Math.random() * options.length);
 
-    var rand = Math.floor(Math.random() * options.length);
+
+
     
-    
-    
-    
-    document.getElementById('')
     document.getElementById('text').innerHTML = options[rand];
     document.getElementById('thingsImg').src = imgs[rand];
+    document.getElementById('thingsImg').style.border = '0.2vw solid white';
+    
 }
+
+
 
 
 
