@@ -46,15 +46,11 @@ var imgs = ['images/music.jpg', 'images/art.jpg', 'images/boardGame.jpg', 'image
 
 
 
-
 function things() {
   
-    
    var rand = Math.floor(Math.random() * options.length);
 
 
-
-    
     document.getElementById('text').innerHTML = options[rand];
     document.getElementById('thingsImg').src = imgs[rand];
     document.getElementById('thingsImg').style.border = '0.2vw solid white';
