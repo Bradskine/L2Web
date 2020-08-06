@@ -1,14 +1,15 @@
 * {
     margin: 0;
-    padding 0;
+    padding: 0;
+    outline: none;
 }
 
 html {
     background: url(images/bg.jpg) no-repeat center fixed;
     background-size: 100vw 100vh;
-
+    font-family: 'Raleway', sans-serif;
 }
-
+/*                          template for all each page*/
 
 .main {
     display: grid;
@@ -16,36 +17,38 @@ html {
     grid-template-rows: auto;
 
 }
-
+   
 
 nav {
     grid-column: 2/3;
 }
 
 .nav {
-/*    grid-column: 2/3;*/
+    /*    grid-column: 2/3;*/
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 1fr 1fr 1fr 1fr auto;
+    grid-template-rows: 1fr 1fr 1fr 1fr auto;    /*  template for nav strip with links on it */
     height: 100vh;
     background-color: rgb(75, 62, 68, 0.93);
     margin-left: 0;
     border-left: 5px solid rgb(0, 0, 0);
     border-right: 5px solid rgb(0, 0, 0);
 }
+   
 
 
 nav a {
     align-self: center;
     text-align: center;
-    font-size: 2.4vw;
-    text-decoration: none;
+    font-size: 2.6vw;
+    text-decoration: none;     
     color: red;
     text-shadow: 2px 2px 1px #000000;
-
+    font-family: 'Playfair Display', serif;
+   
 }
-
-nav a:hover {
+/*position and looks of the links when hovered and not hovered */
+nav a:hover{
     text-decoration: underline;
     text-decoration-color: red;
 
@@ -55,13 +58,14 @@ nav a:hover {
 */
 
 
-    font-size: 2.5vw;
+    font-size: 2.72vw;
     /*     border-bottom: 4px solid black;*/
 }
 
+
+
 .bottom {
     color: white;
-    margin: bottom: 50px;
 }
 
 h1 {
@@ -69,8 +73,9 @@ h1 {
     font-size: 2.0vw;
     text-decoration: underline;
     text-shadow: 2px 2px 1px black;
+    font-family: 'Playfair Display', serif;
 }
-
+   /* changes the texts */
 h2 {
     font-size: 1.20vw;
     margin-left: 1vw;
@@ -91,22 +96,28 @@ section {
 
 .homeSection {
     overflow: scroll;
+     display: grid;
+     grid-template-rows: repeat(5, auto 1fr) 100000fr;
+    
 }
 
 p {
     color: white;
     font-size: 1.25vw;
-    margin: 0 10px 20px 10px;
+    margin: 0;
+    margin-top: 0;
+
+   margin-bottom: 1.5vh;
+     margin-left: 1.3vw;
+    margin-right: 1.3vw;
 }
 
 
 .p1 {
-    margin-top: 30px;
+    margin-top: 2vh;
 }
 
-.lastP {
-    margin-bottom: 0;
-}
+
 
 
 
@@ -115,25 +126,31 @@ p {
     border: none;
     color: white;
     padding: 16px 32px;
-    text-decoration: none;
+    text-decoration: none;       /* code for the buttons on the survival guide page */
     display: inline-block;
-    font-size: 1.15vw;
+    font-size: 1.5vw;
     margin: 18px 2px 0 2px;
-    transition-duration: 0.4s;
+    transition-duration: 0.5s;  /* makes the button feel smother when hovering above it */
     cursor: pointer;
     justify-self: center;
-    width: 15vw;
-    height: 7.5vw;
+    width: 12vw;
+    height: 15vh;
     background-color: black;
     color: red;
     border: 2px solid red;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    
+    outline: none;
 
-
+    
 }
 
+/*
 .button1 {}
-
+  was incase i wanted to make buttons different
 .button2 {}
+*/
 
 
 
@@ -147,7 +164,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 2fr;
-
+   
 }
 
 /*
@@ -200,8 +217,8 @@ h3 {
     display: none;
     grid-row: 2/3;
     color: white;
-    font-size: 2.4vw;
-    text-shadow: 0.3px red;
+    font-size: 2.5vw;
+    text-shadow: 0.3px 0.3px red;
     overflow: scroll;
     max-height: 59vh;
 
@@ -224,17 +241,20 @@ h3 {
 
 
 .BallButton {
-width: 15vw;
-height: 3vw;
- margin: 0 auto;
+    width: 15vw;
+    height: 3vw;
+    margin: 0 auto;
     text-align: center;
     align-self: center;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;
+    outline: none;  /* solved my problem of white border appearing on button after being pressed */
 }
 
 .thingsSection {
     display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: 1fr 1fr 1fr 8fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr auto 70fr;
 }
 
 
@@ -246,6 +266,7 @@ height: 3vw;
     text-shadow: 2px 2px 1px black;
     color: white;
     margin: auto;
+    font-family: 'Playfair Display', serif;
 }
 
 
@@ -259,16 +280,61 @@ height: 3vw;
     margin: 0 auto;
     font-size: 3vw;
     text-align: center;
+    font-family: 'Playfair Display', serif;
+    align-self: center;
 }
 
 
 .thingsImage {
     text-align: center;
-    width: 40vw;
+    width: 38vw;
     max-height: 50vh;
     margin: auto;
-
 }
+
+
+
+/*to make sub headings of imformation bold*/
+h9 {      
+    font-weight: bold;
+    color: white;
+    font-size: 1.20vw;
+    align-self: center;
+     margin-left: 1.3vw;
+    margin-right: 1.3vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
